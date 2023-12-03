@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "todo_icp_backend": {
+      "candid": "src/todo_icp_backend/todo_icp_backend.did",
+      "package": "todo_icp_backend",
+      "type": "rust"
+    },
+    "todo_icp_frontend": {
+      "dependencies": [
+        "todo_icp_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/todo_icp_frontend/src/index.html"
+      },
+      "source": [
+        "src/todo_icp_frontend/assets",
+        "dist/todo_icp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
