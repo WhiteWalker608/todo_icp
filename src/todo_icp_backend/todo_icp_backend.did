@@ -1,3 +1,12 @@
+type Todo = record {
+    "id": nat;
+    "data": text;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    "add": (text) -> (nat);
+    "get": (nat) -> (Todo) query;
+    "getAll": (nat, nat) -> (vec Todo) query;
+    "update": (nat, text) -> ();
+    "delete": (nat) -> ();
 }
